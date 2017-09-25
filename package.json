@@ -1,0 +1,31 @@
+{
+  "name": "realtimeboard_test",
+  "version": "1.0.0",
+  "description": "тестовое задание для realtimeboard",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/webpack-dev-server"
+  },
+  "author": "max lykov",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.6.6",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.7.2",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-angular": "^3.1.1",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "ngtemplate-loader": "^2.0.1",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.6",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "stylelint": "^8.1.1",
+    "stylelint-config-htmlacademy": "^0.1.0",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  }
+}

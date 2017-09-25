@@ -1,0 +1,7 @@
+{
+    "extends": "plugin:angular/johnpapa",
+    "rules": {
+        // Валидация пробелов
+        "indent": ["error", 4]
+    }
+}
