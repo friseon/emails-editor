@@ -6,3 +6,9 @@ require('./../node_modules/angular/angular.min');
 require('./js/app');
 //components
 require('./js/emailsEditor/emailsEditor');
+require('./js/email/email.class');
+require('./js/email/email');
+//utils
+require('./js/utils/getNewId');
+require('./js/utils/isValidEmail')
+require('./js/utils/pressEnter');

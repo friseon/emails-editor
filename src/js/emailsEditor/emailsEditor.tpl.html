@@ -4,10 +4,14 @@
             <h4>Share "Board name" with others</h4>
         </div>
         <div class="emails-editor__list" ng-click="model.onListClick()">
-            <div ng-repeat="email in model.emails track by email._id" class="email">
-                <p class="email__title">{{email.name}}</p>
+            <email
+                ng-repeat="email in model.emails track by email._id"
+                data="email"
+                on-remove="model.removeEmail(email._id)"></email>
+            <!-- <div ng-repeat="email in model.emails track by email._id" class="email">
+                <div class="email__title" ng-class="{'email__title-invalid': !email.valid}">{{email.name}}</div>
                 <div class="email__remove" ng-click="model.removeEmail(email._id); $event.stopPropagation();">x</div>
-            </div>
+            </div> -->
             <input
                 type="text"
                 id="input-field"
@@ -15,6 +19,7 @@
                 ng-model="model.inputField"
                 placeholder="add more people..."
                 ng-blur="model.addEmail()"
+                press-enter="model.addEmail()"
             >
         </div>
     </div>

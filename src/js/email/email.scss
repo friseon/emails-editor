@@ -1,0 +1,40 @@
+.email {
+    display: flex;
+    flex-direction: row;
+    background-color: #d9e8ff;
+    border-radius: 20px;
+    color: #333333;
+    font-size: 14px;
+    padding: 6px 12px;
+    margin: 6px;
+
+    &__title {
+        margin: 0;
+        position: relative;
+        max-width: 150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &-invalid {
+            &::after {
+                content: "";
+                height: 1px;
+                width: 100%;
+                display: block;
+                background-color: #b52e31;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
+
+    &__remove {
+        padding: 6px;
+        margin-top: -6px;
+        margin-right: -6px;
+        margin-left: 4px;
+        margin-bottom: -6px;
+        cursor: pointer;
+    }
+}

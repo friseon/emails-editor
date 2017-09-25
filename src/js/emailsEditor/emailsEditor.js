@@ -17,20 +17,18 @@
 
     controller.$inject = [
         '$scope',
-        '$window'
+        '$window',
+        'getNewId',
+        'email.class'
     ];
 
     var templateUrl = require('./emailsEditor.tpl.html');
 
-    function controller($scope, $window) {
+    function controller($scope, $window, getNewId, Email) {
         var model = this;
+        var currentId = 0;
 
-        model.emails = [
-            {
-                _id: 0,
-                name: 'sidorov@mail.ru',
-            },
-        ];
+        model.emails = [];
 
         model.onListClick = function() {
             var inputField = $window.document.getElementById('input-field');
@@ -39,21 +37,23 @@
             }
         };
 
+        $scope.$watch('model.emails', function(newV, oldV){
+            if (newV !== oldV) {
+                currentId = getNewId(model.emails);
+            }
+        }, true)
+
         model.addEmail = function() {
-            if (model.inputField.length > 0) {
-                var newId = model.emails && model.emails.length ? 
-                    Math.max.apply(null, model.emails.map(function(item) { return item._id })) + 1 :
-                    0;
-                model.emails.push({
-                    _id: newId,
-                    name: model.inputField,
-                });
+            if (model.inputField && model.inputField.length > 0) {
+                model.emails.push(new Email(currentId, model.inputField));
                 model.inputField = '';
             }
+            console.log(model.emails);
         };
 
         model.removeEmail = function(id) {
             model.emails = model.emails.filter(function(item) { return item._id !== id });
+            console.log(model.emails);
         }
     }
 })();
