@@ -3,12 +3,12 @@
 
     angular
         .module('app')
-        .directive('pressEnter', function() {
+        .directive('confirmEmail', function() {
             return function(scope, element, attrs) {
                 element.bind("keypress", function(event) {
-                    if (event.which === 13) {
+                    if (event.key === 'Enter' || event.key === ',') {
                         scope.$apply(function() {
-                            scope.$eval(attrs.pressEnter);
+                            scope.$eval(attrs.confirmEmail);
                         })
 
                         event.preventDefault();

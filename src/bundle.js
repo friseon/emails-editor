@@ -11,4 +11,5 @@ require('./js/email/email');
 //utils
 require('./js/utils/getNewId');
 require('./js/utils/isValidEmail')
-require('./js/utils/pressEnter');
+require('./js/utils/confirmEmail');
+require('./js/utils/getRandomEmail');

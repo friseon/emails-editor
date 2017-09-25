@@ -1,4 +1,4 @@
-<div class="email">
+<div class="email" title="{{model.name}}">
     <div class="email__title" ng-class="{'email__title-invalid': !model.valid}">{{model.name}}</div>
     <div class="email__remove" ng-click="model.onRemove(); $event.stopPropagation();">x</div>
 </div>
