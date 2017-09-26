@@ -1,6 +1,8 @@
 ;(function(){
     'use strict';
-
+    /**
+     * Прототип для создания e-mail
+     */
     angular
         .module('app')
         .factory('email.class',

@@ -1,6 +1,8 @@
 ;(function(){
     'use strict';
-
+    /**
+     * Проверка валидности e-mail
+     */
     angular
         .module('app')
         .factory('isValidEmail', function() {

@@ -1,6 +1,8 @@
 ;(function(){
     'use strict';
-
+    /**
+     * Получение _id для нового элемента
+     */
     angular
         .module('app')
         .factory('getNewId', function() {

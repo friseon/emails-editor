@@ -1,6 +1,8 @@
 ;(function(){
     'use strict';
-
+    /**
+     * Генерация случайного e-mail
+     */
     angular
         .module('app')
         .factory('getRandomEmail', function() {
@@ -22,7 +24,6 @@
         for (var i = 0; i < 2; i++) {
             result += chars.charAt(Math.floor(Math.random() * chars.length));
         }
-      
         return result;
     }
 })();

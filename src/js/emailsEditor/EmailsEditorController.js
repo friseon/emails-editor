@@ -2,7 +2,9 @@
     'use strict';
 
     require('./emailsEditor.scss');
-
+    /**
+     * Контроллер компонента emails-editor
+     */
     angular
         .module('app')
         .controller('EmailsEditorController', [

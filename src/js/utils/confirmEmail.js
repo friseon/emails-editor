@@ -1,6 +1,10 @@
 ;(function(){
     'use strict';
-
+    /**
+     * Триггер для создания e-mail:
+     * - при нажатии на Enter;
+     * - при установке запятой;
+     */
     angular
         .module('app')
         .directive('confirmEmail', function() {

@@ -2,7 +2,9 @@
     'use strict';
 
     require('./email.scss');
-
+    /**
+     * Компонент блока с e-mail
+     */
     angular
         .module('app')
         .directive('email', function() {
