@@ -8,7 +8,7 @@
         .directive('email', function() {
             return {
                 restrict: 'E',
-                controller: controller,
+                controller: 'EmailController',
                 controllerAs: 'model',
                 scope: {
                     data: '=',
@@ -18,17 +18,5 @@
             }
         });
 
-    controller.$inject = [
-        '$scope',
-    ];
-
     var templateUrl = require('./email.tpl.html');
-
-    function controller($scope) {
-        var model = this;
-
-        model.name = $scope.data.name;
-        model.valid = $scope.data.valid;
-        model.onRemove = $scope.onRemove;
-    }
 })();

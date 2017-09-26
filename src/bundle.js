@@ -6,8 +6,10 @@ require('./../node_modules/angular/angular.min');
 require('./js/app');
 //components
 require('./js/emailsEditor/emailsEditor');
+require('./js/emailsEditor/EmailsEditorController');
 require('./js/email/email.class');
 require('./js/email/email');
+require('./js/email/EmailController');
 //utils
 require('./js/utils/getNewId');
 require('./js/utils/isValidEmail')

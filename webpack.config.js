@@ -13,9 +13,7 @@ var PORT = 8080;
 module.exports = {
     context: __dirname,
     devtool: 'inline-source-map',
-    entry: [
-        path.join(__dirname, SOURCE_PATH, 'bundle.js')
-    ],
+    entry: path.join(__dirname, SOURCE_PATH, 'bundle.js'),
     output: {
         path: __dirname + "/dist",
         filename: "index.js"

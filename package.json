@@ -4,12 +4,14 @@
   "description": "тестовое задание для realtimeboard",
   "main": "index.js",
   "scripts": {
-    "start": "node_modules/.bin/webpack-dev-server"
+    "start": "node_modules/.bin/webpack-dev-server",
+    "test": "./node_modules/karma/bin/karma start karma.config.js --log-level info --single-run"
   },
   "author": "max lykov",
   "license": "ISC",
   "devDependencies": {
     "angular": "^1.6.6",
+    "angular-mocks": "^1.6.6",
     "css-loader": "^0.28.7",
     "eslint": "^4.7.2",
     "eslint-loader": "^1.9.0",
@@ -18,6 +20,12 @@
     "file-loader": "^0.11.2",
     "html-loader": "^0.5.1",
     "html-webpack-plugin": "^2.30.1",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-mocha-reporter": "^2.2.4",
+    "karma-webpack": "^2.0.4",
     "ngtemplate-loader": "^2.0.1",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
