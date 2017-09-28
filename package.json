@@ -4,7 +4,9 @@
   "description": "тестовое задание для realtimeboard",
   "main": "index.js",
   "scripts": {
+    "clear-assets": "rm -rf ./dist/assets",
     "start": "node_modules/.bin/webpack-dev-server",
+    "build": "npm run clear-assets && webpack",
     "test": "./node_modules/karma/bin/karma start karma.config.js --log-level info --single-run"
   },
   "author": "max lykov",

@@ -15,8 +15,9 @@ module.exports = {
     devtool: 'inline-source-map',
     entry: path.join(__dirname, SOURCE_PATH, 'bundle.js'),
     output: {
-        path: __dirname + "/dist",
-        filename: "index.js"
+        path: path.join(__dirname, OUTPUT_PATH),
+        filename: 'assets/js/index.js',
+        publicPath: './'
     },
     module: {
         rules: [
@@ -51,8 +52,7 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: 'index.css',
-            disable: false,
+            filename: 'assets/css/index.css',
             allChunks: true
         }),
         new HtmlWebpackPlugin({
