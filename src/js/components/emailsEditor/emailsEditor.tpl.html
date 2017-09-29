@@ -1,27 +1,16 @@
-<div class="emails-editor__container">
-    <div class="emails-editor__body">
-        <div class="emails-editor__title">
-            <h4>Share "Board name" with others</h4>
-        </div>
-        <div class="emails-editor__list" ng-click="model.onListClick()">
-            <email
-                ng-repeat="email in model.emails track by email._id"
-                data="email"
-                on-remove="model.removeEmail(email._id)"></email>
-            <input
-                type="text"
-                id="input-field"
-                class="emails-editor__input-field"
-                ng-model="model.inputField"
-                placeholder="add more people..."
-                ng-blur="model.addEmail()"
-                confirm-email="model.addEmail()"
-                ng-paste="model.addEmail()"
-            >
-        </div>
-    </div>
-    <footer class="emails-editor__footer">
-        <button class="emails-editor__button" ng-click="model.addRandomMail()">Add email</button>
-        <button class="emails-editor__button" ng-click="model.getEmailsCount()">Get emails count</button>
-    </footer>
+<div class="emails-editor" ng-click="model.onListClick()">
+    <email
+        ng-repeat="email in model.emails track by email._id"
+        data="email"
+        on-remove="model.removeEmail(email._id)"></email>
+    <input
+        type="text"
+        id="input-field"
+        class="emails-editor__input-field"
+        ng-model="model.inputField"
+        placeholder="add more people..."
+        ng-blur="model.addEmail()"
+        confirm-email="model.addEmail()"
+        ng-paste="model.addEmail()"
+    >
 </div>

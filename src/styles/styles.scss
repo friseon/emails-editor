@@ -8,3 +8,51 @@ body {
     font-family: "Arial";
     height: 100%;
 }
+
+.page {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__body {
+        background-color: #f8f8f8;
+        padding: 48px;
+
+        > * + * {
+            margin-top: 48px;
+        }
+    }
+
+    &__title {
+        h4 {
+            margin: 0;
+            margin-bottom: 48px;
+            font-weight: normal;
+            color: #323232;
+            font-size: 20px;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: row;
+        padding: 32px 48px;
+        background-color: #ffffff;
+
+        > * + * {
+            margin-left: 24px;
+        }
+    }
+
+    &__button {
+        border: none;
+        border-radius: 3px;
+        background-color: #6699ff;
+        color: #ffffff;
+        padding: 12px;
+        min-width: 120px;
+        font-size: 14px;
+        font-weight: normal;
+    }
+}

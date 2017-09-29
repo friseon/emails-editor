@@ -15,9 +15,14 @@
             'getRandomEmail',
             '$timeout',
             function ($scope, $window, Email, getNewId, getRandomEmail, $timeout) {
-            
+
                 var vm = this;
                 var currentId = 0;
+
+                /**
+                 * Объект, где хранятся "ручки" для внешнего вызова внутренних методов
+                 */
+                vm.api = $scope.api || {};
 
                 vm.emails = [];
                 vm.inputField = '';
@@ -60,8 +65,9 @@
 
                 /**
                  * Случайно сгенерированный e-mail
+                 * - для внешнего вызова
                  */
-                vm.addRandomMail = function() {
+                vm.api.addRandomMail = function() {
                     vm.emails.push(new Email(currentId, getRandomEmail()));
                     if (inputField !== undefined && inputField !== null) {
                         inputField.focus();
@@ -70,8 +76,9 @@
 
                 /**
                  * Вывод количества e-mail
+                 * - для внешнего вызова
                  */
-                vm.getEmailsCount = function() {
+                vm.api.getEmailsCount = function() {
                     alert('Кол-во e-mail: ' + vm.emails.length);
                 }
             }

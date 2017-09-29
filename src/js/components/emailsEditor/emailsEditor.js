@@ -12,7 +12,9 @@
                 restrict: 'E',
                 controller: 'EmailsEditorController',
                 controllerAs: 'model',
-                scope: {},
+                scope: {
+                    api: '='
+                },
                 templateUrl: templateUrl
             }
         });

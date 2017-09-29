@@ -4,6 +4,7 @@ require('./styles/styles.scss');
 require('./../node_modules/angular/angular.min');
 //app
 require('./js/app');
+require('./js/AppController');
 //components
 require('./js/components/emailsEditor/emailsEditor');
 require('./js/components/emailsEditor/EmailsEditorController');

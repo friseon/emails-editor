@@ -7,6 +7,17 @@
     <title>Realtimeboard тестовое</title>
 </head>
 <body>
-    <emails-editor></emails-editor>
+    <div class="page__wrapper" ng-controller="AppController as app">
+        <div class="page__body">
+            <div class="page__title">
+                <h4>Share "Board name" with others</h4>
+            </div>
+            <emails-editor api="app.emailsEditorApi"></emails-editor>
+        </div>
+        <footer class="page__footer">
+            <button class="page__button" ng-click="app.emailsEditorApi.addRandomMail()">Add email</button>
+            <button class="page__button" ng-click="app.emailsEditorApi.getEmailsCount()">Get emails count</button>
+        </footer>
+    </div>
 </body>
 </html>
